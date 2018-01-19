@@ -1,0 +1,12 @@
+score = [0,0,0,0,0]
+add=0
+for i in range(0,5):
+    score[i]=input()
+    score[i]=int(score[i])
+    if score[i]<40:
+        score[i]=40
+
+for s in score:
+    add = add+s
+    
+print(int(add/5))
