@@ -1,0 +1,18 @@
+n=input()
+n=int(n)
+count=0
+
+while n>=0:
+    if n%5==0:
+        print(int(n/5+count))
+        break
+
+    elif n==0:
+        print(count)
+        break
+    elif n<2:
+        print('-1')
+        break
+    else:
+        n=n-3
+        count=count+1
