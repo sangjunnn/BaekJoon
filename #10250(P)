@@ -1,0 +1,24 @@
+t=input()
+t=int(t)
+h=[]
+w=[]
+n=[]
+
+for i in range(0,t):
+    h_in,w_in,n_in=input().split()
+    h_in=int(h_in)
+    w_in=int(w_in)
+    n_in=int(n_in)
+    h.append(h_in)
+    w.append(w_in)
+    n.append(n_in)
+    
+for i in range(0,t):
+    if n[i]%h[i]==0 and n[i]/h[i]<10:
+        print(h[i]*100+int(n[i]/h[i]))
+    elif n[i]%h[i]==0 and n[i]/h[i]>=10:
+        print(h[i]*100+int(n[i]/h[i]))
+    elif n[i]%h[i]!=0 and n[i]/h[i]>=9:
+        print(h[i]*100+int(1+(n[i]/h[i])))
+    else:
+        print(n[i]%h[i]*100+int(1+(n[i]/h[i])))
