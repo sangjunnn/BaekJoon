@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+static int count_1 = 0;
+static int count_2 = 0;
+
+int fibonacci(int n){
+
+
+
+	if (n == 0){
+		count_1++;
+		//cout << "0";
+		return 0;
+	}
+	else if (n == 1){
+		count_2++;
+		//cout << "1";
+		return 1;
+	}
+	else{
+		return fibonacci(n - 1) + fibonacci(n - 2);
+	}
+}
+
+int main(void){
+	int t;
+	cin >> t;
+
+	int n;
+
+	int result = 0;
+	for (int i = 0; i < t; i++){
+		cin >> n;
+		result = fibonacci(n);
+		cout << count_1 << " " << count_2 << endl;
+		count_1 = 0;
+		count_2 = 0;
+	}
+	return 0;
+}
