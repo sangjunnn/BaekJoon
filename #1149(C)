@@ -28,8 +28,6 @@ int main(){
 			min = arr[n - 1][i];
 		}
 	}
-
 	cout << min << endl;
-
 	return 0;
 }
